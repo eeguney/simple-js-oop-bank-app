@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Bankaya Hoşgeldiniz</h1>
+        <div class="welcome-container" id="app">
+            <div class="col">
+                <button type="button" id="signup">Üye Ol</button>
+            </div>
+            <div class="col">
+                <h3>Üye girişi:</h3>
+                <input type="text" id="login-name" placeholder="Ad Soyad" />
+                <input type="password" id="login-password" placeholder="Şifre" />
+                <button type="button" id="login-btn">Giriş Yap</button>
+                <span id="error"></span>
+            </div>
+            <div class="signup-modal hide">
+                <button type="button" class="goback">GO BACK</button>
+                <h3>Üye ol:</h3>
+                <input type="text" id="signup-name" placeholder="Ad Soyad" />
+                <input type="password" id="signup-password" placeholder="Şifre" />
+                <button type="button" id="signup-btn">Üye Ol</button>
+            </div>
+            <div class="account-manage hide">
+                <div class="flex">
+                    <div class="col"><h3>Hesap</h3></div>
+                    <div class="col">
+                        <button type="button" id="logout">Çıkış Yap</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <label>Üye numarası:</label> <span id="account-id"></span>
+            </div>
+                <div class="col">
+                        <label>Toplam para:</label> <span id="balance">
+                </div>
+                <div class="flex">
+                    <div class="col">
+                        <button type="button" id="toggle-addmoneyModal">PARA YATIR</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="toggle-withdrawModal">PARA ÇEK</button>
+                    </div>
+            </div>
+            <div class="addmoney-modal hide">
+                <div class="flex">
+                    <div class="col"><h3>Para Yatır</h3></div>
+                    <div class="col">
+                        <button type="button" id="addmoney-goback">Geri Dön</button>
+                    </div>
+                </div>
+                <input type="number" min="0" id="addmoney-amount" />
+                <button type="button" id="addmoney-btn">YATIR</button>
+            </div>
+            <div class="withdraw-modal hide">
+                <div class="flex">
+                    <div class="col"><h3>Para Çek</h3></div>
+                    <div class="col">
+                        <button type="button" id="withdraw-goback">Geri Dön</button>
+                    </div>
+                </div>
+                <input type="number" min="0" id="withdraw-amount" />
+                <button type="button" id="withdraw-btn">YATIR</button>
+                <span id="withdraw-error"></span>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script  type="text/javascript" src="script.js"></script>
+</body>
+</html>
